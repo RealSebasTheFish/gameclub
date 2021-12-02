@@ -1,0 +1,8 @@
+tournaments = [
+
+]
+
+class tournament
+{
+    
+}

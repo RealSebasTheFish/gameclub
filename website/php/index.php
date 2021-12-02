@@ -6,7 +6,8 @@ $conn = OpenCon();
 // This is a comment
 if ($conn)
 {
-    $sql = "CREATE TABLE members (id int, realname varchar(255), email varchar(255), alias varchar(255), discordid int, points varchar(65535), matches varchar(65535));";
+    $sql = "CREATE TABLE members (id int, realname varchar(255), email varchar(255), customdata varchar(65535));";
+    
     $result = $conn->query($sql);
     if ($result)
     {

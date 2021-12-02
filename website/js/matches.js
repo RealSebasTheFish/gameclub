@@ -41,3 +41,12 @@ matches = [
         }    
     }
 ]
+
+
+class match
+{
+    constructor(timePlayed, participants, game, customData)
+    {
+        this.id = 27482634;
+    }
+}
