@@ -8,9 +8,10 @@
 		<script>
 			var allGames = [];
 			
-			function game(gameNm, sts) {
+			function game(gameNm, sts, id) {
 				this.gameName = gameNm;
 				this.stats = sts;
+				this.id = id;
 				
 				this.show = function() {
 					//TODO
@@ -22,18 +23,12 @@
 				for (var i = 0; i < child.length; i++) {
 					if (child[i].nodeName == "DIV") {
 						if (child[i].classList.contains("hidden")) {
-							child[i].style.display = "inline";
-						}
-					}
-				}
-			}
-			
-			function collapse(element) {
-				var child = element.childNodes;
-				for (var i = 0; i < child.length; i++) {
-					if (child[i].nodeName == "DIV") {
-						if (child[i].classList.contains("hidden")) {
-							child[i].style.display = "none";
+							if (child[i].style.display == "") {
+								child[i].style.display = "inline";
+							}
+							else if (child[i].style.display == "inline") {
+								child[i].style.display = "";
+							}
 						}
 					}
 				}
@@ -44,7 +39,7 @@
 	<body>
 		<h1>Test Page</h1>
 		
-		<div class="game" onmouseleave="collapse(this)" onmouseover="expand(this)">
+		<div class="game" onclick="expand(this)">
 			<h2>Smash Bros - 1st</h2>
 			<div class="hidden">
 				<h3>Players</h3>
