@@ -1,4 +1,4 @@
-playerData = [
+playerData = [ // A list of members
     {
         id: "73465834975",
         displayName: "Jim",
@@ -12,8 +12,10 @@ playerData = [
 
                 }
             },
-            matches: [216321736, 2189371283, 2198391273, 28371938237],
-            attedance: []
+            matches: [216321736, 2189371283, 2198391273, 28371938237], // List of match objects
+            attedance: { // JSON object with keys as the dates in MM/DD/YYYY format and boolean for attended or not as the value
+                "12/01/2021": true
+            }
         }
     }
 ]
