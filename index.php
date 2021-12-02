@@ -1,6 +1,7 @@
 <?php
 include 'db.php';
 
+$shdjhasdjk = "hello mudno!";
 $conn = OpenCon();
 
 if ($conn)
