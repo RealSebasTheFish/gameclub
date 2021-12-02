@@ -1,0 +1,13 @@
+.game {
+	border: 10px solid rgb(180,180,180);
+	width: 80%;
+	border-radius: 20px;
+	margin: auto;
+	padding: 10px;
+	box-shadow:
+		
+}
+
+.hidden {
+	display: none;
+}

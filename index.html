@@ -1,7 +1,87 @@
 <!DOCTYPE html>
 
-<html lang = "en">
-    <body>
-        <h1>Hello World!</h1>
-    </body>
+<html lang="en">
+	<head>
+		<link rel="stylesheet" href="css/main.css"/>
+		<title>Game Club Landing Page</title>
+		
+		<script>
+			var allGames = [];
+			
+			function game(gameNm, sts) {
+				this.gameName = gameNm;
+				this.stats = sts;
+				
+				this.show = function() {
+					//TODO
+				}
+			}
+			
+			function expand(element) {
+				var child = element.childNodes;
+				for (var i = 0; i < child.length; i++) {
+					if (child[i].nodeName == "DIV") {
+						if (child[i].classList.contains("hidden")) {
+							child[i].style.display = "inline";
+						}
+					}
+				}
+			}
+			
+			function collapse(element) {
+				var child = element.childNodes;
+				for (var i = 0; i < child.length; i++) {
+					if (child[i].nodeName == "DIV") {
+						if (child[i].classList.contains("hidden")) {
+							child[i].style.display = "none";
+						}
+					}
+				}
+			}
+		</script>
+	</head>
+	
+	<body>
+		<h1>Test Page</h1>
+		
+		<div class="game" onmouseleave="collapse(this)" onmouseover="expand(this)">
+			<h2>Smash Bros - 1st</h2>
+			<div class="hidden">
+				<h3>Players</h3>
+				<ol>
+					<li>Nathan</li>
+					<li>Seb</li>
+					<li>Nico</li>
+				</ol>
+				<h3>Stats</h3>
+				<table border="1">
+					<tr>
+						<th>Name</th>
+						<th>Kills</th>
+						<th>Deaths</th>
+						<th>Points</th>
+					</tr>
+					<tr>
+						<td>Seb</td>
+						<td>3</td>
+						<td>4</td>
+						<td>8</td>
+					</tr>
+					<tr>
+						<td>Nico</td>
+						<td>4</td>
+						<td>3</td>
+						<td>6</td>
+					</tr>
+					<tr>
+						<td>Nathan</td>
+						<td>7</td>
+						<td>5</td>
+						<td>9</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	<body>
+
 </html>
