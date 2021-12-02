@@ -4,6 +4,7 @@ include 'db.php';
 $shdjhasdjk = "hello mudno!";
 $conn = OpenCon();
 
+//COmment test
 if ($conn)
 {
     $sql = "CREATE TABLE members (id int, realname varchar(255), email varchar(255), alias varchar(255), discordid int, points varchar(65535), matches varchar(65535));";
