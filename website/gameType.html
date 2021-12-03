@@ -26,14 +26,11 @@
 				return false;
 			}
 			
-			function errCheck() {
+			function tmChng() {
 				var fm = document.getElementById("gameForm");
 				
 				fm.tmGm.value = Math.max(fm.tmGm.value, fm.tmGm.min);
 				fm.tmGm.value = Math.min(fm.tmGm.value, fm.tmGm.max);
-				
-				fm.plrTm.value = Math.max(fm.plrTm.value, fm.plrTm.min);
-				fm.plrTm.value = Math.min(fm.plrTm.value, fm.plrTm.max);
 				
 				document.getElementById("ptsPlcLs").innerHTML = "";
 				for (var i = 0; i < fm.tmGm.value; i++) {
@@ -41,8 +38,15 @@
 				}
 			}
 			
+			function plrChng() {
+				var fm = document.getElementById("gameForm");
+			
+				fm.plrTm.value = Math.max(fm.plrTm.value, fm.plrTm.min);
+				fm.plrTm.value = Math.min(fm.plrTm.value, fm.plrTm.max);
+			}
+			
 			document.addEventListener("DOMContentLoaded", function(event) {
-				errCheck();
+				tmChng();
 			});
 			
 		</script>
@@ -58,10 +62,10 @@
 			<input type="number" value="10" required min="0" max="999" id="ptsGm"/>
 			<br>
 			<label for="plrTm">Players Per Team:</label>
-			<input oninput="errCheck();" type="number" value="1" required min="1" max="256" id="plrTm"/>
+			<input oninput="plrChng();" type="number" value="1" required min="1" max="256" id="plrTm"/>
 			<br>
 			<label for="tmGm">Teams Per Game:</label>
-			<input oninput="errCheck();" type="number" value="4" required min="1" max="256" id="tmGm"/>
+			<input oninput="tmChng();" type="number" value="4" required min="1" max="128" id="tmGm"/>
 			<br>
 			<label for="ptsPlcLs">Points By Place:</label>
 			<ol id="ptsPlcLs"></ol>
