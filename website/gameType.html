@@ -3,21 +3,31 @@
 <html lang="en">
 	<head>
 		<link rel="stylesheet" href="css/main.css"/>
+		<script src="js/data/gameProfile.js"></script>
 		<title>New Game</title>
 		
 		<script>
-			
+			function createGm() {
+				var fm = document.getElementById("gameForm");
+				var thisGm = new gameProfile(fm.gmNm, fm.ptsGm, [10,4,1], 2, 2);
+				
+				
+				
+				return false;
+			}
 		</script>
 	</head>
 	
 	<body>
 		<h1>Create New Game Type</h1>
-		<form>
+		<form method="post" id="gameForm" onsubmit="return createGm();">
 			<label for="gmNm">Game Name:</label>
-			<input type="text" required id="gmNm"/>
+			<input type="text" value="Cool Game 2 Electric Boogaloo" required id="gmNm"/>
 			<br>
-			<label for="gmNm">Points Per Game Played:</label>
-			<input type="number" required min="0" max="999" id="gmNm"/>
+			<label for="ptsGm">Points Per Game Played:</label>
+			<input type="number" value="10" required min="0" max="999" id="ptsGm"/>
+			<br>
+			<input type="submit"/>
 		</form>
 	<body>
 
