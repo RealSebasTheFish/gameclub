@@ -18,7 +18,6 @@ function importData()
         currNode.src = "https://gameclub.sacredheart.tech/js/data/" + scripts[i] + ".js";
         document.head.appendChild();
     }
-    
 }
 
 function showMatch()

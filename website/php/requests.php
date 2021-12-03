@@ -3,7 +3,7 @@ include 'db.php';
 
 $conn = OpenCon();
 
-// This is a comment
+/*
 if ($conn)
 {
     $sql = "CREATE TABLE members (id int, realname varchar(255), email varchar(255), customdata varchar(65535));";
@@ -21,6 +21,16 @@ if ($conn)
 else
 {
     echo "Failed to connect";
+}*/
+
+function getMembers()
+{
+
+}
+
+function insertMember()
+{
+    
 }
 
 /*$sql = "SELECT * FROM `emails`";
