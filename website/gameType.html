@@ -3,15 +3,25 @@
 <html lang="en">
 	<head>
 		<link rel="stylesheet" href="css/main.css"/>
+		<!--<script src="https://gameclub.sacredheart.tech/js/scripts/functions.js"></script>-->
 		<script src="js/data/gameProfile.js"></script>
 		<title>New Game</title>
 		
 		<script>
+			
+			//importData();
+			
 			function createGm() {
 				var fm = document.getElementById("gameForm");
-				var thisGm = new gameProfile(fm.gmNm.value, fm.ptsGm.value, [10,4,1], 2, 2);
 				
-				alert(thisGm.pointsPerPlay);
+				var pointsByPlace = []
+				for (var i = 0; i < fm.tmGm.value; i++) {
+					pointsByPlace.push(document.getElementById("ptsFr"+String(i)).value);
+				}
+				
+				var thisGm = new gameProfile(fm.gmNm.value, fm.ptsGm.value, pointsByPlace, fm.plrTm.value, fm.tmGm.value);
+				
+				console.log(thisGm.pointsByPlace);
 				
 				return false;
 			}
