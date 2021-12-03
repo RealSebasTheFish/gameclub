@@ -1,9 +1,9 @@
 class match
 {
-    constructor(pTimePlayed, pParticipants, pGame, pCustomData)
+    constructor(pParticipants, pGame, pCustomData)
     {
         this.id = 87231948263998172364978; // Make this actually generatable
-        this.timePlayed = pTimePlayed;
+        this.timePlayed = Math.round(Date.now() / 1000);
 
         var pMatchData = {}
         pMatchData.game = pGame;
